@@ -3,62 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <title>Declaração de Conclusão de Curso</title>
+
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-            margin: 40px;
+            margin: 50px;
             color: #000;
         }
+
         .topo {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 60px;
         }
+
+        /* LOGO MAIOR */
         .logo {
-            width: 180px;
+            width: 240px;
         }
+
+        /* QR CODE MENOR */
         .qr {
-            width: 160px;
+            width: 130px;
+            height: 130px;
         }
+
         h1 {
             text-align: center;
-            margin-top: 60px;
-            margin-bottom: 40px;
             font-size: 22px;
             letter-spacing: 1px;
+            margin-bottom: 50px;
         }
+
         p {
             text-align: justify;
             font-size: 15px;
             line-height: 1.8;
         }
+
         .rodape {
-            margin-top: 80px;
+            margin-top: 90px;
             font-size: 13px;
         }
+
         .validacao {
             margin-top: 20px;
             font-size: 12px;
             color: #555;
         }
+
+        @media print {
+            body {
+                margin: 40px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
+    <!-- TOPO -->
     <div class="topo">
-        <!-- LOGO -->
-        <img src="unibf.jpeg" alt="UniBF" class="logo">
+        <img src="unibf.jpeg" alt="UniBF Centro Universitário" class="logo">
 
-        <!-- QR CODE CORRIGIDO -->
         <img
             class="qr"
-            src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fiaunibf.com.br%2F42870507sg_ped.html"
-            alt="QR Code para validação do documento"
+            src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fiaunibf.com.br%2F42870507sg_ped.html"
+            alt="QR Code de validação do documento"
         >
     </div>
 
+    <!-- TÍTULO -->
     <h1>DECLARAÇÃO DE CONCLUSÃO DE CURSO</h1>
 
+    <!-- TEXTO -->
     <p>
         Declaramos, para os devidos fins, que o(a) aluno(a)
         <strong>ETTORI RICARDO CASSIANO ALMEIDA</strong>,
@@ -66,14 +85,16 @@
         concluiu integralmente o curso de
         <strong>Segunda Graduação em Pedagogia</strong>,
         nesta Instituição de Ensino Superior, tendo cumprido
-        todas as exigências acadêmicas previstas na matriz curricular.
+        todas as exigências acadêmicas previstas no respectivo
+        projeto pedagógico do curso.
     </p>
 
+    <!-- RODAPÉ -->
     <div class="rodape">
         <p>
             A presente declaração é emitida para fins de comprovação
             acadêmica, podendo ser validada por meio do QR Code acima
-            ou pelo endereço eletrônico informado.
+            ou pelo endereço eletrônico informado abaixo.
         </p>
 
         <div class="validacao">
