@@ -12,41 +12,49 @@
     background:#fff;
     color:#000;
   }
+
   .page{
     width:210mm;
     min-height:297mm;
     padding:25mm 22mm;
     margin:auto;
     position:relative;
+    box-sizing:border-box;
   }
+
   .header{
     display:flex;
     justify-content:space-between;
     align-items:flex-start;
     margin-bottom:20mm;
   }
+
   .logo{
     width:65mm;
     height:auto;
   }
+
   .qrcode{
-    width:32mm;
-    height:32mm;
+    width:45mm;        /* QR Code MAIOR */
+    height:45mm;
     object-fit:contain;
     border:1px solid #ccc;
   }
+
   h1{
     text-align:center;
     font-size:18pt;
     margin:0 0 18mm;
     letter-spacing:.5px;
   }
+
   p{
     font-size:12.5pt;
     line-height:1.6;
     text-align:justify;
     margin:0 0 12mm;
   }
+
   .footer{
     position:absolute;
     bottom:25mm;
@@ -54,14 +62,17 @@
     right:22mm;
     text-align:center;
   }
+
   .data{
     font-size:12.5pt;
     margin-bottom:8mm;
   }
+
   .verificacao{
     font-size:9.5pt;
     color:#666;
   }
+
   @media print{
     body{background:#fff}
   }
@@ -71,13 +82,20 @@
 <body>
 <div class="page">
 
+  <!-- Cabeçalho -->
   <div class="header">
     <img class="logo" src="unibf.jpeg" alt="UniBF - Centro Universitário">
-    <img class="qrcode" src="qrcode.png" alt="QR Code de validação">
+
+    <!-- QR CODE -->
+    <img class="qrcode"
+         src="https://api.qrserver.com/v1/create-qr-code/?size=600x600&data=https://iaunibf.com.br/validacao/42870507SG_PED"
+         alt="QR Code de validação">
   </div>
 
+  <!-- Título -->
   <h1>DECLARAÇÃO DE CONCLUSÃO DE CURSO</h1>
 
+  <!-- Texto -->
   <p>
     Declaramos, para os devidos fins, que o(a) aluno(a)
     <strong>ETTORI RICARDO CASSIANO ALMEIDA</strong>, portador(a) do CPF
@@ -92,17 +110,16 @@
     para fins de comprovação acadêmica.
   </p>
 
+  <!-- Rodapé -->
   <div class="footer">
     <div class="data">
       <strong>Paraíso do Norte</strong>, 09 de fevereiro de 2026.
     </div>
     <div class="verificacao">
-      Validação:
-      https://iaunibf.com.br/validacao/42870507SG_PED
+      Validação: https://iaunibf.com.br/validacao/42870507SG_PED
     </div>
   </div>
 
 </div>
 </body>
 </html>
-
