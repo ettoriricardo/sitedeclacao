@@ -1,127 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Declaração de Conclusão de Curso</title>
-
-<style>
-  body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#fff;
-    color:#000;
-  }
-
-  .page{
-    width:210mm;
-    min-height:297mm;
-    padding:25mm 22mm;
-    margin:auto;
-    position:relative;
-    box-sizing:border-box;
-  }
-
-  .header{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    margin-bottom:20mm;
-  }
-
-  .logo{
-    width:65mm;
-    height:auto;
-  }
-
-  .qrcode{
-    width:45mm;        /* QR Code MAIOR */
-    height:45mm;
-    object-fit:contain;
-    border:1px solid #ccc;
-  }
-
-  h1{
-    text-align:center;
-    font-size:18pt;
-    margin:0 0 18mm;
-    letter-spacing:.5px;
-  }
-
-  p{
-    font-size:12.5pt;
-    line-height:1.6;
-    text-align:justify;
-    margin:0 0 12mm;
-  }
-
-  .footer{
-    position:absolute;
-    bottom:25mm;
-    left:22mm;
-    right:22mm;
-    text-align:center;
-  }
-
-  .data{
-    font-size:12.5pt;
-    margin-bottom:8mm;
-  }
-
-  .verificacao{
-    font-size:9.5pt;
-    color:#666;
-  }
-
-  @media print{
-    body{background:#fff}
-  }
-</style>
+    <meta charset="UTF-8">
+    <title>Declaração de Conclusão de Curso</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 40px;
+            color: #000;
+        }
+        .topo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            width: 180px;
+        }
+        .qr {
+            width: 160px;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 40px;
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+        p {
+            text-align: justify;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+        .rodape {
+            margin-top: 80px;
+            font-size: 13px;
+        }
+        .validacao {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #555;
+        }
+    </style>
 </head>
-
 <body>
-<div class="page">
 
-  <!-- Cabeçalho -->
-  <div class="header">
-    <img class="logo" src="unibf.jpeg" alt="UniBF - Centro Universitário">
+    <div class="topo">
+        <!-- LOGO -->
+        <img src="unibf.jpeg" alt="UniBF" class="logo">
 
-    <!-- QR CODE -->
-    <img
-  src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=https%3A%2F%2Fiaunibf.com.br%2F42870507sg_ped.html"
-  alt="QR Code de validação"
-/>
-
-  </div>
-
-  <!-- Título -->
-  <h1>DECLARAÇÃO DE CONCLUSÃO DE CURSO</h1>
-
-  <!-- Texto -->
-  <p>
-    Declaramos, para os devidos fins, que o(a) aluno(a)
-    <strong>ETTORI RICARDO CASSIANO ALMEIDA</strong>, portador(a) do CPF
-    <strong>015.222.709-14</strong>, concluiu integralmente o curso de
-    <strong>Segunda Graduação em Pedagogia</strong>, nesta Instituição de Ensino Superior,
-    tendo cumprido todas as exigências acadêmicas previstas no respectivo
-    projeto pedagógico do curso.
-  </p>
-
-  <p>
-    A presente declaração é emitida a pedido do(a) interessado(a),
-    para fins de comprovação acadêmica.
-  </p>
-
-  <!-- Rodapé -->
-  <div class="footer">
-    <div class="data">
-      <strong>Paraíso do Norte</strong>, 09 de fevereiro de 2026.
+        <!-- QR CODE CORRIGIDO -->
+        <img
+            class="qr"
+            src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fiaunibf.com.br%2F42870507sg_ped.html"
+            alt="QR Code para validação do documento"
+        >
     </div>
-    <div class="verificacao">
-      Validação: https://iaunibf.com.br/validacao/42870507SG_PED
-    </div>
-  </div>
 
-</div>
+    <h1>DECLARAÇÃO DE CONCLUSÃO DE CURSO</h1>
+
+    <p>
+        Declaramos, para os devidos fins, que o(a) aluno(a)
+        <strong>ETTORI RICARDO CASSIANO ALMEIDA</strong>,
+        portador(a) do CPF <strong>015.222.709-14</strong>,
+        concluiu integralmente o curso de
+        <strong>Segunda Graduação em Pedagogia</strong>,
+        nesta Instituição de Ensino Superior, tendo cumprido
+        todas as exigências acadêmicas previstas na matriz curricular.
+    </p>
+
+    <div class="rodape">
+        <p>
+            A presente declaração é emitida para fins de comprovação
+            acadêmica, podendo ser validada por meio do QR Code acima
+            ou pelo endereço eletrônico informado.
+        </p>
+
+        <div class="validacao">
+            Validação eletrônica disponível em:<br>
+            <strong>https://iaunibf.com.br/42870507sg_ped.html</strong>
+        </div>
+    </div>
+
 </body>
 </html>
